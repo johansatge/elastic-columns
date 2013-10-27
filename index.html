@@ -1,0 +1,162 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Elastic Columns</title>
+        <link href="http://fonts.googleapis.com/css?family=Roboto:300,500" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/columns.css">
+    </head>
+	<body>
+        <div class="about">
+            <h1>Elastic Columns</h1>
+            <p class="gap">
+                Elastic Columns is a jQuery plugin that was designed to be used
+                as an alternative to the well-known <a target="_blank" href="http://isotope.metafizzy.co/">Isotope</a> library.<br />
+            </p>
+            <p class="gap">
+                This plugin is lightweight and will suit your needs if you want to build a grid of items using columns with equal widths.
+            </p>
+            <div class="clear"></div>
+            <h2 class="gap">Demo</h2>
+            <p class="gap">
+                The screen on the right shows a demo of Elastic Columns.<br />
+                Please note that the plugin does not provide animations or filters, but it is easy to implement it by yourself;
+                all you have to do is to add or remove items from the container, and refresh the grid.
+            </p>
+            <p class="gap buttons">
+                <button class="event-add">Add random items</button>
+                <button class="event-reorder">Randomly reorder items</button>
+            </p>
+            <div class="clear"></div>
+            <h2 class="gap">Options</h2>
+            <h3 class="gap">Columns count</h3>
+            <pre class="tiny-gap">$('.container').elasticColumns({columns: 3});</pre>
+            <p class="tiny gap">
+                You probably want to set a number of colums to use.
+                The value may be changed later using the plugin API.
+            </p>
+            <h3 class="gap">Margins</h3>
+<pre class="tiny-gap">$('.container').elasticColumns(
+{
+    innerMargin: 10, // the gap between two tiles
+    outerMargin: 20  // the gap between the tiles and
+                        the edge of the container
+});</pre>
+            <p class="tiny gap">
+                You can tell the plugin to use margins if you don't want to set them yourself in your CSS styles.
+            </p>
+            <div class="clear"></div>
+            <h2 class="gap">API</h2>
+            <p class="gap">
+                The plugin provides a very simple API.<br />
+                Actually, you will only need two things:
+            </p>
+            <h3 class="gap">Refreshing the layout</h3>
+            <pre class="tiny-gap">$('.container').elasticColumns('refresh');</pre>
+            <p class="tiny gap">
+                You may want to refresh the layout when the user resizes the window, or when you add new items to the grid.<br />
+                To insert new content, you may just append it to your container; the plugin will handle it.<br />
+                <em>If you append pictures, be sure to wait them to be loaded before refreshing the layout, or the calculations may be false.</em>
+            </p>
+            <h3 class="gap">Modifying settings on the fly</h3>
+            <pre class="tiny-gap">$('.container').elasticColumns('set', 'columns', 4);</pre>
+            <p class="tiny gap">
+                What if you are building a responsive website ?<br />
+                You may want to change the number of columns depending on the container width.<br />
+                <em>When you are updating a parameter, don't forget to refresh the grid.</em>
+            </p>
+            <div class="clear"></div>
+            <h2 class="gap">Changelog</h2>
+            <p class="gap">
+                @todo
+            </p>
+        </div>
+        <div class="columns">
+            <div class="item">
+                <img src="http://lorempixel.com/400/400/city/">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Quisque vitae lorem eget eros dictum varius.
+                </p>
+            </div>
+
+            <div class="item">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Quisque vitae lorem eget eros dictum varius.
+                    Donec tortor purus, convallis ut dapibus cursus, fringilla eleifend libero.
+                    Vestibulum accumsan enim non lectus aliquam, eget accumsan nibh sollicitudin.
+                </p>
+            </div>
+
+            <div class="item">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Quisque vitae lorem eget eros dictum varius.
+                    Donec tortor purus, convallis ut dapibus cursus, fringilla eleifend libero.
+                    Vestibulum accumsan enim non lectus aliquam, eget accumsan nibh sollicitudin.
+                </p>
+            </div>
+
+            <div class="item">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Quisque vitae lorem eget eros dictum varius.
+                    Donec tortor purus, convallis ut dapibus cursus, fringilla eleifend libero.
+                    Vestibulum accumsan enim non lectus aliquam, eget accumsan nibh sollicitudin.
+                    Donec tortor purus, convallis ut dapibus cursus, fringilla eleifend libero.
+                    Vestibulum accumsan enim non lectus aliquam, eget accumsan nibh sollicitudin.
+                </p>
+            </div>
+
+            <div class="item">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Quisque vitae lorem eget eros dictum varius.
+                </p>
+            </div>
+
+            <div class="item">
+                <img src="http://lorempixel.com/400/250/city/">
+                <h4>Lorem ipsum dolor</h4>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Quisque vitae lorem eget eros dictum varius.
+                    Donec tortor purus, convallis ut dapibus cursus, fringilla eleifend libero.
+                    Vestibulum accumsan enim non lectus aliquam, eget accumsan nibh sollicitudin.
+                </p>
+            </div>
+
+            <div class="item">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Quisque vitae lorem eget eros dictum varius.
+                    Donec tortor purus, convallis ut dapibus cursus, fringilla eleifend libero.
+                    Vestibulum accumsan enim non lectus aliquam, eget accumsan nibh sollicitudin.
+                </p>
+            </div>
+
+            <div class="item">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Quisque vitae lorem eget eros dictum varius.
+                    Donec tortor purus, convallis ut dapibus cursus, fringilla eleifend libero.
+                    Vestibulum accumsan enim non lectus aliquam, eget accumsan nibh sollicitudin.
+                    Donec tortor purus, convallis ut dapibus cursus, fringilla eleifend libero.
+                    Vestibulum accumsan enim non lectus aliquam, eget accumsan nibh sollicitudin.
+                </p>
+            </div>
+
+        </div>
+        <script type="text/javascript" src="assets/js/libs/jquery.min.js"></script>
+        <script type="text/javascript" src="assets/js/elastic-columns.js"></script>
+        <script type="text/javascript" src="assets/js/elastic-columns-demo.js"></script>
+        <script type="text/javascript">
+            window.onload = function()
+            {
+                new ElasticColumnsDemo($('.columns'));
+            };
+        </script>
+	</body>
+</html>

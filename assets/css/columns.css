@@ -1,0 +1,35 @@
+/**
+ * Elastic columns styles
+ */
+.columns {
+    position: relative;
+    left: 40%;
+    width: 60%;
+    top: 0;
+}
+
+.columns .item {
+    display: none;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    overflow: hidden;
+    background: #f8f8f8;
+    font-size: 13px;
+    text-shadow: 0 1px #ffffff;
+}
+
+.columns .item h4 {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 14px;
+    padding: 10px 10px 0 10px;
+}
+
+.columns .item p {
+    padding: 10px;
+}
+
+.columns .item img {
+    width: 100%;
+}
