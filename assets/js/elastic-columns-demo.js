@@ -2,9 +2,8 @@
 /**
  * Elastic Columns demo page
  */
-function ElasticColumnsDemo($container)
+function ElasticColumnsDemo()
 {
-    this.$container = $container;
     this.init();
 };
 
@@ -13,6 +12,10 @@ function ElasticColumnsDemo($container)
  */
 ElasticColumnsDemo.prototype.init = function()
 {
+    // DOM
+    this.$container =   $('.columns');
+    this.$loader =      $('.loader');
+
     // Creates and displays the grid
     this.$container.elasticColumns(
     {
@@ -37,6 +40,7 @@ ElasticColumnsDemo.prototype.init = function()
 ElasticColumnsDemo.prototype.onAddRandomItems = function(evt)
 {
     evt.preventDefault();
+    this.$loader.fadeIn(200);
 
     // Builds a random array
     var items = this.$container.children().get();
@@ -57,11 +61,12 @@ ElasticColumnsDemo.prototype.onAddRandomItems = function(evt)
     }
 
     // Refresh the grid and show the items, when the content has been loaded
-    var self = this;
-    var $images = this.$container.children(':hidden').find('img');
+    var self =      this;
+    var $images =   this.$container.children(':hidden').find('img');
     if ($images.length > 0)
     {
         $images.on('load', $.proxy(this, 'onNewContentLoaded'));
+        $images.on('error', $.proxy(this, 'onNewContentLoaded'));
     }
     else
     {
@@ -124,4 +129,6 @@ ElasticColumnsDemo.prototype.displayItems = function()
         $(this).delay(delay).fadeIn(300);
         delay += 150;
     });
+    this.$loader.delay(delay).fadeOut(200);
+
 };

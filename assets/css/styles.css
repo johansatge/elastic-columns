@@ -44,8 +44,8 @@ body {
     color: #EF4E18;
     font-weight: 500;
     margin: 30px 20px 30px 20px;
-    font-size: 28px;
-    line-height: 28px;
+    font-size: 30px;
+    line-height: 30px;
     text-shadow: 0 2px #ffffff;
 }
 
@@ -76,7 +76,7 @@ body {
 
 .about pre {
     border: 1px solid #f3b2a0;
-    background: #fbf7ec;
+    background: #fdf9ee;
     padding: 10px 10px 12px 10px;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
@@ -107,14 +107,23 @@ body {
     box-shadow: 0 4px #4e89a3;
 }
 
-button:hover {
+.about button:hover {
     margin: 1px 5px -1px 0;
     box-shadow: 0 3px #4e89a3;
 }
 
-button:active {
+.about button:active {
     margin: 3px 5px -3px 0;
     box-shadow: 0 1px #4e89a3;
+}
+
+.about .loader {
+    display: none;
+    margin: 9px 0 0 5px;
+    float: left;
+    width: 16px;
+    height: 16px;
+    background: url(images/loader.gif) no-repeat 0 0;
 }
 
 .about .gap {

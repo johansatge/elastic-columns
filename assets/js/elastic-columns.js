@@ -14,6 +14,7 @@
         };
         this.settings =   {};
         this.$element =   $(element);
+        this.columns =    [];
 
         /**
          * Inits
@@ -28,25 +29,24 @@
          */
         this.buildLayout = function()
         {
-            var items =            this.$element.children().get();
+            var $items =           this.$element.children();
             var container_width =  this.$element.width();
             var column_width =     (container_width - (this.settings.innerMargin * (this.settings.columns - 1)) - (this.settings.outerMargin * 2)) / this.settings.columns;
-            var columns_height =   [];
             for(var index = 0; index < this.settings.columns; index += 1)
             {
-                columns_height[index] = this.settings.outerMargin;
+                this.columns[index] = this.settings.outerMargin;
             }
 
             // Iterates into elements
-            for(var item_id in items)
+            for(var item_id = 0; item_id < $items.length; item_id += 1)
             {
-                var $item = $(items[item_id]);
+                var $item = $($items.get(item_id));
 
                 // Looks for the smallest column
                 var smallest_column = 0;
                 for(var column_id = 0; column_id < this.settings.columns; column_id += 1)
                 {
-                    if (columns_height[column_id] < columns_height[smallest_column])
+                    if (this.columns[column_id] < this.columns[smallest_column])
                     {
                         smallest_column = column_id;
                     }
@@ -60,22 +60,22 @@
                 $item.css('position', 'absolute');
                 $item.css('width', (column_width - horizontal_padding) + 'px');
                 $item.css('left', (this.settings.outerMargin + (this.settings.innerMargin * smallest_column) + (smallest_column * column_width)) + 'px');
-                $item.css('top', columns_height[smallest_column] + 'px');
+                $item.css('top', this.columns[smallest_column] + 'px');
 
                 // Updates columns height
-                columns_height[smallest_column] += $item.height() + this.settings.innerMargin + vertical_padding;
+                this.columns[smallest_column] += $item.height() + this.settings.innerMargin + vertical_padding;
             }
 
             // Looks for the highest column and sets the container height
             var highest_column = 0;
             for(var column_id = 0; column_id < this.settings.columns; column_id += 1)
             {
-                if (columns_height[column_id] > columns_height[highest_column])
+                if (this.columns[column_id] > this.columns[highest_column])
                 {
                     highest_column = column_id;
                 }
             }
-            this.$element.height(columns_height[highest_column] + 'px');
+            this.$element.height(this.columns[highest_column] + 'px');
         };
     }
     $.fn.elasticColumns = function(options, option, value)
@@ -95,7 +95,7 @@
             {
                 if (options == 'refresh')
                 {
-                    plugin.buildLayout();
+                    plugin.buildLayout(false);
                 }
                 if (options == 'set')
                 {

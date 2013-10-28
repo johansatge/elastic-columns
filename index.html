@@ -27,6 +27,7 @@
             <p class="gap buttons">
                 <button class="event-add">Add random items</button>
                 <button class="event-reorder">Randomly reorder items</button>
+                <span class="loader"></span>
             </p>
             <div class="clear"></div>
             <h2 class="gap">Options</h2>
@@ -155,7 +156,7 @@
         <script type="text/javascript">
             window.onload = function()
             {
-                new ElasticColumnsDemo($('.columns'));
+                new ElasticColumnsDemo();
             };
         </script>
 	</body>
