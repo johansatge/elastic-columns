@@ -1,7 +1,10 @@
 Elastic Columns
 ===============
 
-@todo
+Elastic Columns is a jQuery plugin that was designed to be used as an alternative to the well-known [Isotope](isotope.metafizzy.co) library.
 
-- permettre de masquer les éléments avec une classe
-- ajouter une classe aux items pour ne rafraichir que les nouveaux + ajouter une option "refreshNew"
+[View project page](http://johansatge.github.io/elastic-columns/)
+
+@todo
+* allow users to hide items by adding a class
+* only refresh new content when the user uses the "refreshNew" function
