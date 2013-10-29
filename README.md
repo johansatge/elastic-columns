@@ -6,5 +6,4 @@ Elastic Columns is a jQuery plugin that was designed to be used as an alternativ
 [View project page](http://johansatge.github.io/elastic-columns/)
 
 @todo
-* allow users to hide items by adding a class
 * only refresh new content when the user uses the "refreshNew" function

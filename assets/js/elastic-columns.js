@@ -29,7 +29,7 @@
          */
         this.buildLayout = function()
         {
-            var $items =           this.$element.children();
+            var $items =           this.$element.children(':not(.elastic-columns-ignore)');
             var container_width =  this.$element.width();
             var column_width =     (container_width - (this.settings.innerMargin * (this.settings.columns - 1)) - (this.settings.outerMargin * 2)) / this.settings.columns;
             for(var index = 0; index < this.settings.columns; index += 1)

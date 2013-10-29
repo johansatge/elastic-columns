@@ -43,7 +43,7 @@ ElasticColumnsDemo.prototype.onAddRandomItems = function(evt)
     this.$loader.fadeIn(200);
 
     // Builds a random array
-    var items = this.$container.children().get();
+    var items = this.$container.children(':not(.elastic-columns-ignore)').get();
     for (var index = items.length - 1; index > 0; index -= 1)
     {
         var random_index =      Math.floor(Math.random() * (index + 1));
@@ -124,7 +124,7 @@ ElasticColumnsDemo.prototype.onResize = function()
 ElasticColumnsDemo.prototype.displayItems = function()
 {
     var delay = 0;
-    this.$container.children(':hidden').each(function()
+    this.$container.children(':hidden:not(.elastic-columns-ignore)').each(function()
     {
         $(this).delay(delay).fadeIn(300);
         delay += 150;
