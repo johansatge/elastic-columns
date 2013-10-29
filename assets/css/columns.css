@@ -3,6 +3,7 @@
  */
 .columns {
     position: relative;
+    z-index: 1;
     left: 40%;
     width: 60%;
     top: 0;
