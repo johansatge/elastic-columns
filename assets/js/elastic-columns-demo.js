@@ -90,7 +90,13 @@ ElasticColumnsDemo.prototype.onNewContentLoaded = function()
 ElasticColumnsDemo.prototype.onRandomlyReorderItems = function(evt)
 {
     evt.preventDefault();
-    console.log('@todo');
+    var items = this.$container.children(':not(.elastic-columns-ignore)').get();
+    for (var index = 0; index < items.length - 1; index += 1)
+    {
+        var random_index =      Math.floor(Math.random() * index);
+        this.$container.append($(items[random_index]));
+    }
+    this.$container.elasticColumns('refresh');
 };
 
 /**
