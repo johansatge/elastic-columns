@@ -9,6 +9,6 @@ Elastic Columns is a jQuery plugin that was designed to be used as an alternativ
 
 ![Screen capture](https://raw.github.com/johansatge/elastic-columns/master/screenshot.png)
 
-## To-do
+## @todo
 
 * Only refresh new content when the user uses the "refreshNew" function
