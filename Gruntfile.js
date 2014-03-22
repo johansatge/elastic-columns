@@ -13,7 +13,7 @@ module.exports = function(grunt)
             {
                 files:
                 {
-                    'assets/js/<%= pkg.name %>.min.js': 'assets/js/<%= pkg.name %>.js'
+                    'src/<%= pkg.name %>.min.js': 'src/<%= pkg.name %>.js'
                 }
             }
         }
