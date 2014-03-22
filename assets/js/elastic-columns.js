@@ -1,7 +1,3 @@
-/**
- * Elastic Columns v0.1.1
- * http://johansatge.github.io/elastic-columns
- */
 (function($)
 {
     $.elasticColumns = function(element, options)
