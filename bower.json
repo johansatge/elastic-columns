@@ -14,11 +14,18 @@
     ],
     "license": "MIT",
     "ignore": [
-        "**/.*",
+        "demo",
         "node_modules",
-        "bower_components",
-        "test",
-        "tests"
+        ".gitignore",
+        "Gruntfile.js",
+        "index.html",
+        "LICENSE",
+        "package.json",
+        "README.md",
+        "screenshot.png",
     ],
+    "dependencies": {
+        "jquery": ">=1.8"
+    },
     "description": "Elastic Columns is a jQuery plugin that was designed to be used as an alternative to the well-known Isotope library."
 }
