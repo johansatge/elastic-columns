@@ -52,7 +52,7 @@
             <h2 class="gap">API</h2>
             <p class="gap">
                 The plugin provides a very simple API.<br />
-                Actually, you will only need two things:
+                Actually, you will only need a few things:
             </p>
             <h3 class="gap">Refreshing the layout</h3>
             <pre class="tiny-gap">$('.container').elasticColumns('refresh');</pre>
@@ -68,6 +68,11 @@
                 You may want to change the number of columns depending on the container width.<br />
                 <em>When you are updating a parameter, don't forget to refresh the grid.</em>
             </p>
+            <h3 class="gap">Destroying the layout</h3>
+            <pre class="tiny-gap">$('.container').elasticColumns('destroy');</pre>
+            <p class="tiny gap">
+                If you want to restore the layout to its initial state.
+            </p>
             <h3 class="gap">Ignoring items</h3>
             <pre class="tiny-gap">&lt;div class="item elastic-columns-ignore"&gt;&lt;/div&gt;</pre>
             <p class="tiny gap">
@@ -76,9 +81,13 @@
             </p>
             <div class="clear"></div>
             <h2 class="gap">Changelog</h2>
+            <h3 class="tiny-gap">0.1.1</h3>
+            <p class="tiny gap">
+                Added a method to remove the styles set by the plugin.
+            </p>
             <h3 class="tiny-gap">0.1</h3>
             <p class="tiny gap">
-                Initial version
+                Initial version.
             </p>
         </div>
         <div class="columns">

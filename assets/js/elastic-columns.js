@@ -1,5 +1,5 @@
 /**
- * Elastic Columns v0.1
+ * Elastic Columns v0.1.1
  * http://johansatge.github.io/elastic-columns
  */
 (function($)
@@ -85,7 +85,7 @@
          */
         this.destroyLayout = function()
         {
-            // Iterates into elements and clear the styles set byt the plugin
+            // Iterates into elements and clear the styles set by the plugin
             var $items = this.$element.children(':not(.elastic-columns-ignore)');
             for(var item_id = 0; item_id < $items.length; item_id += 1)
             {
@@ -96,7 +96,6 @@
             // Restores the container's height
             this.$element.css({'height':''});
         };
-
     };
     $.fn.elasticColumns = function(options, option, value)
     {
