@@ -107,7 +107,7 @@ ElasticColumnsDemo.prototype.getColumnsCount = function()
     var grid_width =    $('.columns').width();
     var column_width =  grid_width;
     var columns =       1;
-    while(column_width > 350)
+    while(column_width > 250)
     {
         columns += 1;
         column_width = grid_width / columns;
