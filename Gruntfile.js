@@ -2,18 +2,18 @@ module.exports = function(grunt)
 {
     grunt.initConfig(
     {
-        pkg: grunt.file.readJSON('package.json'),
+        bower:  grunt.file.readJSON('bower.json'),
         uglify:
         {
             options:
             {
-                banner: '/*! <%= pkg.title %> <%= pkg.version %> - <%= pkg.homepage %> */\n'
+                banner: '/* <%= bower.title %> <%= bower.version %> - <%= bower.homepage %> */\n'
             },
             dist:
             {
                 files:
                 {
-                    'src/<%= pkg.name %>.min.js': 'src/<%= pkg.name %>.js'
+                    'src/<%= bower.name %>.min.js': 'src/<%= bower.name %>.js'
                 }
             }
         }

@@ -1,35 +1,6 @@
 {
     "name": "elastic-columns",
-    "title": "Elastic Columns",
-    "description": "Elastic Columns is a jQuery plugin that was designed to be used as an alternative to the well-known Isotope library.",
-    "version": "0.1.1",
-    "main": "assets/js/elastic-columns.min.js",
-    "homepage": "http://johansatge.github.io/elastic-columns/",
-    "author":
-    {
-        "name": "Johan Satgé",
-        "url": "http://www.johansatge.fr/"
-    },
-    "repository":
-    {
-        "type": "git",
-        "url": "https://github.com/johansatge/elastic-columns.git"
-    },
-    "keywords":
-    [
-        "jquery",
-        "javascript",
-        "library"
-    ],
-    "licenses":
-    [
-        {
-            "type": "MIT",
-            "url": "https://github.com/jquery/jquery/blob/master/MIT-LICENSE.txt"
-        }
-    ],
-    "devDependencies":
-    {
+    "devDependencies": {
         "grunt": "~0.4.2",
         "grunt-contrib-uglify": "~0.2.2"
     }
