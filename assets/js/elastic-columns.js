@@ -62,8 +62,10 @@
                 $item.css('left', (this.settings.outerMargin + (this.settings.innerMargin * smallest_column) + (smallest_column * column_width)) + 'px');
                 $item.css('top', this.columns[smallest_column] + 'px');
 
+
+
                 // Updates columns height
-                this.columns[smallest_column] += $item.height() + this.settings.innerMargin + vertical_padding;
+                this.columns[smallest_column] += $item.outerHeight() + this.settings.innerMargin + vertical_padding;
             }
 
             // Looks for the highest column and sets the container height
@@ -75,9 +77,27 @@
                     highest_column = column_id;
                 }
             }
-            this.$element.height(this.columns[highest_column] + 'px');
+            this.$element.outerHeight(this.columns[highest_column] + 'px');
+
         };
-    }
+        /**
+         * Destroys the layout restoring its initial appearance
+         */
+        this.destroyLayout = function()
+        {
+            // Iterates into elements and clear the styles set byt the plugin
+            var $items = this.$element.children(':not(.elastic-columns-ignore)');
+            for(var item_id = 0; item_id < $items.length; item_id += 1)
+            {
+                var $item = $($items.get(item_id));
+                $item.css({'position':'','width':'','left':'','top':''});
+            }
+
+            // Restores the container's height
+            this.$element.css({'height':''});
+        };
+
+    };
     $.fn.elasticColumns = function(options, option, value)
     {
         return this.each(function()
@@ -95,11 +115,15 @@
             {
                 if (options == 'refresh')
                 {
-                    plugin.buildLayout(false);
+                    plugin.buildLayout();
                 }
                 if (options == 'set')
                 {
                     plugin.settings[option] = value;
+                }
+                if (options == 'destroy')
+                {
+                    plugin.destroyLayout();
                 }
             }
         });
