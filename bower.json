@@ -4,7 +4,7 @@
     "version": "0.1.1",
     "homepage": "https://github.com/johansatge/elastic-columns",
     "authors": [
-        "Johan <contact@johansatge.fr>"
+        "Johan Satgé <contact@johansatge.fr>"
     ],
     "main": "assets/js/elastic-columns.min.js",
     "keywords": [
@@ -14,15 +14,15 @@
     ],
     "license": "MIT",
     "ignore": [
-        "demo",
+        "assets/js/elastic-columns-demo.js",
+        "assets/css",
         "node_modules",
         ".gitignore",
         "Gruntfile.js",
         "index.html",
         "LICENSE",
         "package.json",
-        "README.md",
-        "screenshot.png"
+        "README.md"
     ],
     "dependencies": {
         "jquery": ">=1.8"
