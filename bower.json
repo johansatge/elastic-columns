@@ -6,7 +6,7 @@
     "authors": [
         "Johan <contact@johansatge.fr>"
     ],
-    "main": "src/elastic-columns.min.js",
+    "main": "assets/js/elastic-columns.min.js",
     "keywords": [
         "jquery",
         "library",
