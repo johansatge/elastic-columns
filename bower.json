@@ -6,7 +6,7 @@
     "authors": [
         "Johan Satgé <contact@johansatge.fr>"
     ],
-    "main": "assets/js/elastic-columns.min.js",
+    "main": "dist/elastic-columns.min.js",
     "keywords": [
         "jquery",
         "library",
@@ -14,12 +14,9 @@
     ],
     "license": "MIT",
     "ignore": [
-        "assets/js/elastic-columns-demo.js",
-        "assets/css",
         "node_modules",
         ".gitignore",
         "Gruntfile.js",
-        "index.html",
         "LICENSE",
         "package.json",
         "README.md"
