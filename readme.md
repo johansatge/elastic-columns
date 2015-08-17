@@ -105,8 +105,9 @@ This can be useful if you are filtering the grid content and don't want to remov
 
 | Version | Date | Notes |
 | --- | --- | --- |
-| `0.2.0` | August 17th, 2015 | Added the demo files in the main branch |
-| `0.1.1` | July 26th, 2014 | Added a method to remove the styles set by the plugin. |
+| `0.2.1` | August 17th, 2015 | Adds logo and new demo page |
+| `0.2.0` | August 17th, 2015 | Adds demo files in the main branch |
+| `0.1.1` | July 26th, 2014 | Adds a method to remove the styles set by the plugin. |
 | `0.1` | January 29th, 2014 | Initial version |
 
 ## License
