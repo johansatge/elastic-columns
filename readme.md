@@ -21,8 +21,6 @@ I wanted to make a simple alternative to [Isotope](http://isotope.metafizzy.co) 
 
 Elastic Columns is lightweight (less than *3kb*) and will suit your needs if you have to build a grid of items using columns with equal widths.
 
-Please note that it only sets the position of the items, when asked to do so (see *Basic usage* and *Responsive usage*).
-
 ## Installation
 
 With Bower:
@@ -44,7 +42,7 @@ $container.elasticColumns(
     columns:        3,  // the number of colums
     innerMargin:    10, // the gap between two tiles
     outerMargin:    20  // the gap between the tiles and
-                           the edge of the container
+                        // the edge of the container
 });
 ```
 
