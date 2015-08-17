@@ -13,7 +13,7 @@ module.exports = function(grunt)
             {
                 files:
                 {
-                    'dist/js/<%= bower.name %>.min.js': 'src/js/<%= bower.name %>.js'
+                    'dist/<%= bower.name %>.min.js': 'src/<%= bower.name %>.js'
                 }
             }
         }

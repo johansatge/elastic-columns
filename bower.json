@@ -1,7 +1,7 @@
 {
   "name": "elastic-columns",
   "title": "Elastic Columns",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "homepage": "https://github.com/johansatge/elastic-columns",
   "authors": [
     "Johan Satgé <contact@johansatge.fr>"
@@ -19,7 +19,7 @@
     "Gruntfile.js",
     "LICENSE",
     "package.json",
-    "README.md",
+    "readme.md",
     "index.html",
     "demo"
   ],
