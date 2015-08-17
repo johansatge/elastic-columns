@@ -1,3 +1,5 @@
+![Bower](https://img.shields.io/bower/v/elastic-columns.svg)
+
 ![Elastic Columns](logo.png)
 
 A jQuery plugin designed to be used as an alternative to the well-known [Isotope](http://isotope.metafizzy.co) library - [View demo](http://johansatge.github.io/elastic-columns/).
