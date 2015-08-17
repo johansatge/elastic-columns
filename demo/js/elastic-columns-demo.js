@@ -1,4 +1,3 @@
-
 /**
  * Elastic Columns demo page
  */
@@ -13,16 +12,16 @@ function ElasticColumnsDemo()
 ElasticColumnsDemo.prototype.init = function()
 {
     // DOM
-    this.$container =   $('.columns');
-    this.$loader =      $('.loader');
+    this.$container = $('.columns');
+    this.$loader = $('.loader');
 
     // Creates and displays the grid
     this.$container.elasticColumns(
-    {
-        columns:        this.getColumnsCount(),
-        innerMargin:    20,
-        outerMargin:    20
-    });
+        {
+            columns: this.getColumnsCount(),
+            innerMargin: 20,
+            outerMargin: 20
+        });
     this.displayItems();
 
     // Resize event: tell the plugin to refresh the layout
@@ -40,29 +39,27 @@ ElasticColumnsDemo.prototype.init = function()
 ElasticColumnsDemo.prototype.onAddRandomItems = function(evt)
 {
     evt.preventDefault();
-    this.$loader.fadeIn(200);
+    this.$loader.css('visibility', 'visible');
 
     // Builds a random array
     var items = this.$container.children(':not(.elastic-columns-ignore)').get();
     for (var index = items.length - 1; index > 0; index -= 1)
     {
-        var random_index =      Math.floor(Math.random() * (index + 1));
-        var temp =              items[index];
-        items[index] =          items[random_index];
-        items[random_index] =   temp;
+        var random_index = Math.floor(Math.random() * (index + 1));
+        items[index] = items[random_index];
+        items[random_index] = items[index];
     }
     items = items.slice(0, 3);
 
     // Adds the items to the container
-    for(var index = 0; index < items.length; index += 1)
+    for (index = 0; index < items.length; index += 1)
     {
         var $new_item = $(items[index]).clone().hide();
         this.$container.append($new_item);
     }
 
     // Refresh the grid and show the items, when the content has been loaded
-    var self =      this;
-    var $images =   this.$container.children(':hidden').find('img');
+    var $images = this.$container.children(':hidden').find('img');
     if ($images.length > 0)
     {
         $images.on('load', $.proxy(this, 'onNewContentLoaded'));
@@ -93,7 +90,7 @@ ElasticColumnsDemo.prototype.onRandomlyReorderItems = function(evt)
     var items = this.$container.children(':not(.elastic-columns-ignore)').get();
     for (var index = 0; index < items.length - 1; index += 1)
     {
-        var random_index =      Math.floor(Math.random() * index);
+        var random_index = Math.floor(Math.random() * index);
         this.$container.append($(items[random_index]));
     }
     this.$container.elasticColumns('refresh');
@@ -104,10 +101,10 @@ ElasticColumnsDemo.prototype.onRandomlyReorderItems = function(evt)
  */
 ElasticColumnsDemo.prototype.getColumnsCount = function()
 {
-    var grid_width =    $('.columns').width();
-    var column_width =  grid_width;
-    var columns =       1;
-    while(column_width > 250)
+    var grid_width = $('.columns').width();
+    var column_width = grid_width;
+    var columns = 1;
+    while (column_width > 250)
     {
         columns += 1;
         column_width = grid_width / columns;
@@ -120,8 +117,8 @@ ElasticColumnsDemo.prototype.getColumnsCount = function()
  */
 ElasticColumnsDemo.prototype.onResize = function()
 {
-    this.$container.elasticColumns('refresh');
     this.$container.elasticColumns('set', 'columns', this.getColumnsCount());
+    this.$container.elasticColumns('refresh');
 };
 
 /**
@@ -135,6 +132,5 @@ ElasticColumnsDemo.prototype.displayItems = function()
         $(this).delay(delay).fadeIn(300);
         delay += 150;
     });
-    this.$loader.delay(delay).fadeOut(200);
-
+    this.$loader.delay(delay).css('visibility', 'hidden');
 };

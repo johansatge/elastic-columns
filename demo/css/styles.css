@@ -1,6 +1,3 @@
-/**
- * Global page styles
- */
 html, body, div, button, p, img, h1, h2, h3, h4, pre
 {
     margin  : 0;
@@ -8,170 +5,145 @@ html, body, div, button, p, img, h1, h2, h3, h4, pre
     border  : 0;
 }
 
+html
+{
+    background              : #c3d4d9;
+    -webkit-font-smoothing  : antialiased;
+    -moz-osx-font-smoothing : grayscale;
+}
+
 body
 {
     position    : relative;
-    font-family : Roboto;
-    font-weight : 300;
+    font-family : Roboto, sans-serif;
 }
 
-.about
+.header
 {
     z-index    : 2;
     top        : 0;
-    color      : #333333;
-    position   : absolute;
-    width      : 50%;
-    background : #f5f1e6;
-    min-height : 100%;
-}
-
-.about a,
-.about a:visited
-{
-    color           : #ef4e18;
-    text-decoration : none;
-}
-
-.about a:hover
-{
-    text-decoration : underline;
-}
-
-.about .anchor,
-.about .anchor:visited
-{
-    color           : #5ba1bf;
-    text-decoration : none;
-    margin          : 0 10px 0 0;
-}
-
-.about .clear
-{
+    left       : 0;
     width      : 100%;
-    clear      : both;
-    height     : 3px;
-    background : #ffffff;
-    margin     : 25px 0 25px 0;
+    height     : 76px;
+    position   : absolute;
+    background : #bacacf;
 }
 
-.about h1
+.header h1
 {
-    color       : #ef4e18;
     font-weight : 500;
-    margin      : 30px 20px 30px 20px;
-    font-size   : 32px;
+    color       : #ffffff;
+    text-shadow : 0 1px 0 #92a6ab;
+    float       : left;
     line-height : 32px;
-    text-shadow : 0 1px #ffffff;
+    font-size   : 32px;
+    margin      : 19px 0 0 20px;
 }
 
-.about h2
+@media screen and (max-width : 600px)
 {
-    color       : #5ba1bf;
-    font-weight : 500;
-    font-size   : 28px;
-    line-height : 28px;
-    text-shadow : 0 1px #ffffff;
-    margin      : 0 20px 20px 20px;
+    .header h1
+    {
+        line-height : 22px;
+        font-size   : 22px;
+        margin      : 24px 0 0 20px;
+    }
 }
 
-.about h3
+@media screen and (max-width : 450px)
 {
-    font-weight : 500;
-    font-size   : 22px;
-    line-height : 22px;
-    text-shadow : 0 1px #ffffff;
-    margin      : 0 20px 20px 20px;
+    .header h1
+    {
+        display : none;
+    }
 }
 
-.about p
+.header button
 {
-    font-size   : 16px;
-    line-height : 24px;
-    margin      : 0 20px 20px 20px;
-}
-
-.about pre
-{
-    border        : 1px solid #f3b2a0;
-    background    : #fdf9ee;
-    padding       : 10px 10px 12px 10px;
-    border-radius : 4px;
-    color         : #3a3a3a;
-    overflow      : hidden;
-    margin        : 0 20px 20px 20px;
-}
-
-.about code
-{
-    font-size     : 14px;
-    background    : #fdf9ee;
-    border        : 1px solid #fdd5ca;
-    border-radius : 3px;
-    padding       : 3px 6px 4px 6px;
-}
-
-.about .buttons
-{
-    height : 37px;
-}
-
-.about button
-{
-    float         : left;
+    float         : right;
     padding       : 8px 16px 8px 16px;
-    margin        : 0 5px 0 0;
-    border        : 0;
-    background    : #5ba1bf;
+    margin        : 20px 20px 0 0;
     color         : #ffffff;
-    text-shadow   : 0 1px #4e89a3;
+    text-shadow   : 0 1px 0 #92a6ab;
+    background    : transparent;
     font-size     : 14px;
     font-weight   : 500;
     cursor        : pointer;
-    border-radius : 3px;
+    border-radius : 15px;
     outline       : 0;
-    box-shadow    : 0 4px #4e89a3;
+    border        : 1px solid #e0ebec;
 }
 
-.about button:hover
+@media screen and (max-width : 600px)
 {
-    margin     : 1px 5px -1px 0;
-    box-shadow : 0 3px #4e89a3;
+    .header button
+    {
+        padding   : 4px 12px 4px 12px;
+        margin    : 24px 20px 0 0;
+        color     : #ffffff;
+        font-size : 13px;
+    }
 }
 
-.about button:active
+.header button:active
 {
-    margin     : 3px 5px -3px 0;
-    box-shadow : 0 1px #4e89a3;
+    background : #c3d4d9;
 }
 
-.about .loader
+.header .loader
 {
-    display    : none;
-    margin     : 9px 0 0 5px;
-    float      : left;
-    width      : 16px;
-    height     : 16px;
-    background : url(images/loader.gif) no-repeat 0 0;
+    visibility : hidden;
+    margin     : 25px 20px 0 0;
+    float      : right;
+    font-size  : 22px;
+    color      : #ffffff;
 }
 
-
-.footer
+@media screen and (max-width : 450px)
 {
-    width       : 100%;
-    margin      : 10px 0 20px 0;
-    font-family : 'Roboto', sans-serif;
+    .header .loader
+    {
+        margin    : 28px 20px 0 0;
+        float     : right;
+        font-size : 17px;
+    }
+}
+
+.columns
+{
+    position : absolute;
+    left     : 0;
+    right    : 0;
+    top      : 76px;
+    bottom   : 0;
+    z-index  : 1;
+}
+
+.columns .item
+{
+    font-weight   : 300;
+    display       : none;
+    border-radius : 3px;
+    overflow      : hidden;
+    background    : #ffffff;
+    font-size     : 13px;
+    color         : #212121;
+}
+
+.columns .item h4
+{
+    font-weight : 500;
     font-size   : 14px;
-    font-weight : 300;
-    text-align  : center;
-    color       : #b3b0a8;
+    line-height : 14px;
+    padding     : 10px 10px 0 10px;
 }
 
-.footer a,
-.footer a:hover,
-.footer a:visited
+.columns .item p
 {
-    color           : #999999;
-    text-decoration : none;
-    border-bottom   : 1px dashed #bababa;
+    padding : 10px;
+}
+
+.columns .item img
+{
+    width : 100%;
 }

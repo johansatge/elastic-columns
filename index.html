@@ -3,9 +3,10 @@
     <head>
         <meta charset="utf-8">
         <title>Elastic Columns</title>
-        <link href="http://fonts.googleapis.com/css?family=Roboto:300,500" rel="stylesheet" type="text/css">
+        <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" type="text/css" href="demo/css/styles.css">
-        <link rel="stylesheet" type="text/css" href="demo/css/columns.css">
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="//fonts.googleapis.com/css?family=Roboto:300,500" rel="stylesheet" type="text/css">
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
                 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -16,99 +17,15 @@
         </script>
     </head>
 	<body>
-        <div class="about">
+        <div class="header">
             <h1>Elastic Columns</h1>
-            <p>
-                Elastic Columns is a jQuery plugin that was designed to be used
-                as an alternative to the well-known <a target="_blank" href="http://isotope.metafizzy.co/">Isotope</a> library.<br />
-            </p>
-            <p>
-                This plugin is lightweight and will suit your needs if you want to build a grid of items using columns with equal widths.
-            </p>
-            <p>
-                <a class="anchor" href="#demo">Demo</a>
-                <a class="anchor" href="#installation">Installation</a>
-                <a class="anchor" href="#usage">Basic usage</a>
-                <a class="anchor" href="#api">API</a>
-                <a class="anchor" href="#changelog">Changelog</a>
-            </p>
-            <div class="clear" id="demo"></div>
-            <h2>Demo</h2>
-            <p>
-                The screen on the right shows a demo of Elastic Columns.<br />
-                Please note that the plugin does not provide animations or filters, but it is easy to implement it by yourself;
-                all you have to do is to add or remove items from the container, and refresh the grid.
-            </p>
-            <p class="buttons">
-                <button class="event-add">Add random items</button>
-                <button class="event-reorder">Randomly reorder items</button>
-                <span class="loader"></span>
-            </p>
-            <div class="clear" id="installation"></div>
-            <h2>Installation</h2>
-            <p>
-                The easiest method with <a href="http://bower.io/" target="_blank">Bower</a>:
-            </p>
-            <pre>bower install elastic-columns</pre>
-            <p>
-                If you don't use Bower, you can checkout the Git repository and install the
-                minified script whenever you want in your project.
-            </p>
-            <div class="clear" id="usage"></div>
-            <h2>Basic usage</h2>
-            <p>
-                This code will set the position of the children nodes of your container.
-            </p>
-<pre>$('.container').elasticColumns(
-{
-    columns:        3,  // the number of colums
-    innerMargin:    10, // the gap between two tiles
-    outerMargin:    20  // the gap between the tiles and
-                           the edge of the container
-});</pre>
-            <div class="clear" id="api"></div>
-            <h2>API</h2>
-            <h3>Refreshing the layout</h3>
-            <p>
-                You may want to refresh the layout when the user resizes the window,
-                or when you add new items to the grid (by appending nodes to your container).<br />
-            </p>
-            <pre>$('.container').elasticColumns('refresh');</pre>
-            <p>
-                <em>
-                    If you append pictures, be sure to wait for them to be loaded before refreshing the layout,
-                    or the calculations may be false.
-                </em>
-            </p>
-            <h3>Modifying settings on the fly</h3>
-            <p>
-                You can change the plugin settings at any time.
-            </p>
-            <pre>$('.container').elasticColumns('set', 'columns', 4);</pre>
-            <p>
-                <em>When you are updating a parameter, don't forget to refresh the grid.</em>
-            </p>
-            <h3>Destroying the layout</h3>
-            <p>
-                You can restore the layout to its initial state.
-            </p>
-            <pre>$('.container').elasticColumns('destroy');</pre>
-            <h3>Ignoring items</h3>
-            <p>
-                You may add the <code>elastic-columns-ignore</code> class to some items if you don't want them to be positionned on the grid.<br />
-                This can be useful if you are filtering the grid content and don't want to remove items on the fly.
-            </p>
-            <pre>&lt;div class="item elastic-columns-ignore"&gt;&lt;/div&gt;</pre>
-            <div class="clear" id="changelog"></div>
-            <div class="footer">
-                Hosted on <a target="_blank" href="https://github.com/johansatge/elastic-columns">Github</a>
-                &ndash; &copy; 2015 <a target="_blank" href="http://johan.satge.io">Johan Satgé</a>
-                &ndash; Made with &hearts; in Nice, France
-            </div>
+            <button class="event-reorder">Reorder items</button>
+            <button class="event-add">Add items</button>
+            <i class="loader fa fa-refresh fa-spin"></i>
         </div>
         <div class="columns">
             <div class="item">
-                <img src="http://lorempixel.com/400/400/city/">
+                <img src="http://lorempixel.com/g/400/400/city/">
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Quisque vitae lorem eget eros dictum varius.
@@ -147,7 +64,7 @@
                 </p>
             </div>
             <div class="item">
-                <img src="http://lorempixel.com/400/250/city/">
+                <img src="http://lorempixel.com/g/400/250/city/">
                 <h4>Lorem ipsum dolor</h4>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
