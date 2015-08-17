@@ -1,0 +1,189 @@
+/**
+ * Global page styles
+ */
+html, body, div, button, p, img, h1, h2, h3, h4, pre
+{
+    margin  : 0;
+    padding : 0;
+    border  : 0;
+}
+
+body
+{
+    position    : relative;
+    font-family : Roboto;
+    font-weight : 300;
+}
+
+.fork-me
+{
+    position   : absolute;
+    z-index    : 3;
+    display    : block;
+    width      : 141px;
+    height     : 141px;
+    top        : 0;
+    right      : 0;
+    background : url(images/fork-me.png) no-repeat 0 0;
+}
+
+.about
+{
+    z-index    : 2;
+    top        : 0;
+    color      : #333333;
+    position   : absolute;
+    width      : 50%;
+    background : #f5f1e6;
+    min-height : 100%;
+}
+
+.about a,
+.about a:visited
+{
+    color           : #ef4e18;
+    text-decoration : none;
+}
+
+.about a:hover
+{
+    text-decoration : underline;
+}
+
+.about .anchor,
+.about .anchor:visited
+{
+    color           : #5ba1bf;
+    text-decoration : none;
+    margin          : 0 10px 0 0;
+}
+
+.about .clear
+{
+    width      : 100%;
+    clear      : both;
+    height     : 3px;
+    background : #ffffff;
+    margin     : 25px 0 25px 0;
+}
+
+.about h1
+{
+    color       : #ef4e18;
+    font-weight : 500;
+    margin      : 30px 20px 30px 20px;
+    font-size   : 32px;
+    line-height : 32px;
+    text-shadow : 0 1px #ffffff;
+}
+
+.about h2
+{
+    color       : #5ba1bf;
+    font-weight : 500;
+    font-size   : 28px;
+    line-height : 28px;
+    text-shadow : 0 1px #ffffff;
+    margin      : 0 20px 20px 20px;
+}
+
+.about h3
+{
+    font-weight : 500;
+    font-size   : 22px;
+    line-height : 22px;
+    text-shadow : 0 1px #ffffff;
+    margin      : 0 20px 20px 20px;
+}
+
+.about p
+{
+    font-size   : 16px;
+    line-height : 24px;
+    margin      : 0 20px 20px 20px;
+}
+
+.about pre
+{
+    border        : 1px solid #f3b2a0;
+    background    : #fdf9ee;
+    padding       : 10px 10px 12px 10px;
+    border-radius : 4px;
+    color         : #3a3a3a;
+    overflow      : hidden;
+    margin        : 0 20px 20px 20px;
+}
+
+.about code
+{
+    font-size     : 14px;
+    background    : #fdf9ee;
+    border        : 1px solid #fdd5ca;
+    border-radius : 3px;
+    padding       : 3px 6px 4px 6px;
+}
+
+.about .buttons
+{
+    height : 37px;
+}
+
+.about button
+{
+    float         : left;
+    padding       : 8px 16px 8px 16px;
+    margin        : 0 5px 0 0;
+    border        : 0;
+    background    : #5ba1bf;
+    color         : #ffffff;
+    text-shadow   : 0 1px #4e89a3;
+    font-size     : 14px;
+    font-weight   : 500;
+    cursor        : pointer;
+    border-radius : 3px;
+    outline       : 0;
+    box-shadow    : 0 4px #4e89a3;
+}
+
+.about button:hover
+{
+    margin     : 1px 5px -1px 0;
+    box-shadow : 0 3px #4e89a3;
+}
+
+.about button:active
+{
+    margin     : 3px 5px -3px 0;
+    box-shadow : 0 1px #4e89a3;
+}
+
+.about .loader
+{
+    display    : none;
+    margin     : 9px 0 0 5px;
+    float      : left;
+    width      : 16px;
+    height     : 16px;
+    background : url(images/loader.gif) no-repeat 0 0;
+}
+
+
+.footer
+{
+    width       : 100%;
+    margin      : 10px 0 20px 0;
+    font-family : 'Roboto', sans-serif;
+    font-size   : 14px;
+    font-weight : 300;
+    text-align  : center;
+    color       : #b3b0a8;
+}
+
+.footer a,
+.footer a:hover,
+.footer a:visited
+{
+    color           : #999999;
+    text-decoration : none;
+    border-bottom   : 1px dashed #bababa;
+}
