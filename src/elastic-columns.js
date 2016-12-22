@@ -2,6 +2,8 @@
 {
     $.elasticColumns = function(element, options)
     {
+        var self = this;
+
         this.defaults =
         {
             columns:        3,
@@ -20,6 +22,7 @@
             this.settings = $.extend({}, this.defaults, options);
             this.buildLayout();
         };
+
         /**
          * Builds the layout using the given settings
          */
@@ -33,35 +36,35 @@
                 this.columns[index] = this.settings.outerMargin;
             }
 
+            var parent;
+            var parent_top;
+            var parent_left;
+            var first_item = $($items.get(0));
+            if (first_item) {
+                parent = first_item.parent();
+                var parent_left_padding = parseInt(parent.css('padding-left'));
+                var parent_top_padding = parseInt(parent.css('padding-top'));
+                parent_left = parent.offset().left + parent_left_padding;
+                parent_top = parent.offset().top + parent_top_padding;
+            }
+
             // Iterates into elements
             for(var item_id = 0; item_id < $items.length; item_id += 1)
             {
                 var $item = $($items.get(item_id));
 
                 // Looks for the smallest column
-                var smallest_column = 0;
-                for(var column_id = 0; column_id < this.settings.columns; column_id += 1)
-                {
-                    if (this.columns[column_id] < this.columns[smallest_column])
-                    {
-                        smallest_column = column_id;
-                    }
-                }
-
-                // Gets the item padding
-                var horizontal_padding =    parseInt($item.css('padding-left') )+ parseInt($item.css('padding-right'));
-                var vertical_padding =      parseInt($item.css('padding-top') )+ parseInt($item.css('padding-bottom'));
+                var smallest_column = _getColumnWithMinHeight();
 
                 // Sets the item CSS properties
+                var is_relative = (this.settings.position === 'relative');
                 $item.css('position', 'absolute');
-                $item.css('width', (column_width - horizontal_padding) + 'px');
-                $item.css('left', (this.settings.outerMargin + (this.settings.innerMargin * smallest_column) + (smallest_column * column_width)) + 'px');
-                $item.css('top', this.columns[smallest_column] + 'px');
-
-
+                $item.css('width', (column_width) + 'px');
+                $item.css('left', (parent_left * is_relative + this.settings.outerMargin + (this.settings.innerMargin * smallest_column) + (smallest_column * column_width)) + 'px');
+                $item.css('top', (parent_top * is_relative + this.columns[smallest_column]) + 'px');
 
                 // Updates columns height
-                this.columns[smallest_column] += $item.outerHeight() + this.settings.innerMargin + vertical_padding;
+                this.columns[smallest_column] += $item.outerHeight() + this.settings.innerMargin;
             }
 
             // Looks for the highest column and sets the container height
@@ -92,6 +95,19 @@
             // Restores the container's height
             this.$element.css({'height':''});
         };
+
+        //private methods
+        function _getColumnWithMinHeight() {
+            var smallest_column = 0;
+            for(var column_id = 0; column_id < self.settings.columns; column_id += 1)
+                {
+                    if (self.columns[column_id] < self.columns[smallest_column])
+                    {
+                        smallest_column = column_id;
+                    }
+                }
+            return smallest_column;
+        }
     };
     $.fn.elasticColumns = function(options, option, value)
     {
