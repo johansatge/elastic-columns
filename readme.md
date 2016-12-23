@@ -41,10 +41,11 @@ This code will set the position of the children nodes in your container.
 var $container = $('.container');
 $container.elasticColumns(
 {
-    columns:        3,  // the number of colums
-    innerMargin:    10, // the gap between two tiles
-    outerMargin:    20  // the gap between the tiles and
-                        // the edge of the container
+    columns:     3,         // the number of colums
+    innerMargin: 10,        // the gap between two tiles
+    outerMargin: 20,        // the gap between the tiles and
+    position:    'relative' // draw relative to the container
+                            // the edge of the container
 });
 ```
 
