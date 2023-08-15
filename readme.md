@@ -4,6 +4,8 @@
 
 A jQuery plugin designed to be used as an alternative to the well-known [Isotope](http://isotope.metafizzy.co) library - [View demo](http://johansatge.github.io/elastic-columns/).
 
+> 💡 **Update August 2023:** this project is 9 years old 🎉 it still works, but you might also consider more modern alternatives such as [CSS Grids](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grids), depending on your use case.
+
 ---
 
 * [Why](#why)
